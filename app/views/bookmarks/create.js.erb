@@ -1,0 +1,2 @@
+$("form")[0].reset();
+$("#bookmarks").append("<%= escape_javascript(render partial: 'bookmark', locals: {bookmark: @bookmark}) %>");

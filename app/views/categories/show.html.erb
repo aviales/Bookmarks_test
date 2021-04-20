@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @category.title %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @category.is_public %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @category.parent_category %>
+</p>
+
+<%= link_to 'API', api_path(@category) %> |
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

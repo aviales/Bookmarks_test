@@ -1,0 +1,17 @@
+<tr>
+    <td><%= bookmark.title %></td>
+    <td><%= bookmark.url %></td>
+    <td>
+        <% bookmark.categories.each do |c| %>
+            <%= c %> <br>
+        <% end %>
+    </td>
+    <td>
+        <% bookmark.kinds.each do |k| %>
+            <%= k %> <br>
+        <% end %>
+    </td>
+    <td><%= link_to 'Show', bookmark_path(bookmark) %></td>
+    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
+    <td><%= link_to 'Destroy', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
